@@ -6,5 +6,8 @@
   ],
   "wrapper": "./src/Wrapper.tsx",
   "webpack": "./vite.config.ts",
-  "publicPath": "./public"
+  "publicPath": "./public",
+  "framework": "react",
+  "projectId": "39QXmku9jv823kwFb9NBl9XDqZZ",
+  "projectName": "test1"
 }
