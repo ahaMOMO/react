@@ -1,18 +1,21 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss/theme.css';
+@import 'tailwindcss/preflight.css';
+@import 'tailwindcss/utilities.css';
+@config "../tailwind.config.js";
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter.ttf") format("truetype");
+  font-family: 'Inter';
+  src: url('/fonts/Inter.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @theme inline {
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -44,41 +47,42 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --shadow-custom: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+  --shadow-custom: var(--shadow-x) var(--shadow-y) var(--shadow-blur)
+    var(--shadow-spread) var(--shadow-color);
 }
 
 :root {
   --radius: 0.5rem;
-  
+
   /* Light Theme - Business Oriented */
   --background: rgba(248, 250, 252, 1); /* Slate 50 */
-  --foreground: rgba(15, 23, 42, 1);    /* Slate 900 */
-  
+  --foreground: rgba(15, 23, 42, 1); /* Slate 900 */
+
   --card: rgba(255, 255, 255, 1);
   --card-foreground: rgba(15, 23, 42, 1);
-  
+
   --popover: rgba(255, 255, 255, 1);
   --popover-foreground: rgba(15, 23, 42, 1);
-  
-  --primary: rgba(79, 70, 229, 1);      /* Indigo 600 */
+
+  --primary: rgba(79, 70, 229, 1); /* Indigo 600 */
   --primary-foreground: rgba(255, 255, 255, 1);
-  
-  --secondary: rgba(241, 245, 249, 1);  /* Slate 100 */
+
+  --secondary: rgba(241, 245, 249, 1); /* Slate 100 */
   --secondary-foreground: rgba(15, 23, 42, 1);
-  
-  --muted: rgba(241, 245, 249, 1);      /* Slate 100 */
+
+  --muted: rgba(241, 245, 249, 1); /* Slate 100 */
   --muted-foreground: rgba(100, 116, 139, 1); /* Slate 500 */
-  
+
   --accent: rgba(241, 245, 249, 1);
   --accent-foreground: rgba(15, 23, 42, 1);
-  
-  --destructive: rgba(239, 68, 68, 1);  /* Red 500 */
+
+  --destructive: rgba(239, 68, 68, 1); /* Red 500 */
   --destructive-foreground: rgba(255, 255, 255, 1);
-  
-  --border: rgba(226, 232, 240, 1);     /* Slate 200 */
+
+  --border: rgba(226, 232, 240, 1); /* Slate 200 */
   --input: rgba(226, 232, 240, 1);
   --ring: rgba(79, 70, 229, 0.5);
-  
+
   /* Sidebar Specific */
   --sidebar: rgba(255, 255, 255, 1);
   --sidebar-foreground: rgba(71, 85, 105, 1);
@@ -88,7 +92,7 @@
   --sidebar-accent-foreground: rgba(15, 23, 42, 1);
   --sidebar-border: rgba(226, 232, 240, 1);
   --sidebar-ring: rgba(79, 70, 229, 0.5);
-  
+
   /* Shadow */
   --shadow-color: rgba(0, 0, 0, 0.05);
   --shadow-spread: 0px;
@@ -109,19 +113,24 @@
   --border: rgba(51, 65, 85, 1);
 }
 
+body {
+  @apply leading-[normal] m-0 bg-background text-foreground font-sans;
+}
+
 @layer base {
+  *,
+  ::before,
+  ::after {
+    border-width: 0;
+  }
   * {
     @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground font-sans;
-    /* Simulate the 1440px constraint requirement by centering large content if needed, 
-       though typically main layout handles the constraints */
   }
 }
 
 @layer utilities {
   .shadow-custom {
-    box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+    box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur)
+      var(--shadow-spread) var(--shadow-color);
   }
 }

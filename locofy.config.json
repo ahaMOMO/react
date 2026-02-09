@@ -4,7 +4,7 @@
     "./src/components/ui/input.tsx",
     "./src/components/ui/sidebar.tsx"
   ],
-  "wrapper": "./src/App.tsx",
+  "wrapper": "./src/Wrapper.tsx",
   "webpack": "./vite.config.ts",
   "publicPath": "./public"
 }
