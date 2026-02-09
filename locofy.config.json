@@ -1,0 +1,10 @@
+{
+  "components": [
+    "./src/components/ui/button.tsx",
+    "./src/components/ui/input.tsx",
+    "./src/components/ui/sidebar.tsx"
+  ],
+  "wrapper": "./src/App.tsx",
+  "webpack": "./vite.config.ts",
+  "publicPath": "./public"
+}

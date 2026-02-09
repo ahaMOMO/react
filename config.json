@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "src": "src/pages/Dashboard.tsx"
+    },
+    {
+      "path": "/users",
+      "src": "src/pages/Users.tsx"
+    },
+    {
+      "path": "/products",
+      "src": "src/pages/Products.tsx"
+    },
+    {
+      "path": "/settings",
+      "src": "src/pages/Settings.tsx"
+    }
+  ],
+  "components": [
+    {"name": "Layout", "src": "src/components/Layout.tsx"},
+    {"name": "Button", "src": "src/components/ui/button.tsx"},
+    {"name": "Card", "src": "src/components/ui/card.tsx"},
+    {"name": "StatsCard", "src": "src/components/StatsCard.tsx"},
+    {"name": "RecentSales", "src": "src/components/RecentSales.tsx"},
+    {"name": "UserTable", "src": "src/components/UserTable.tsx"}
+  ]
+}
