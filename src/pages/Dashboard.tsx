@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import StatsCard from '@/components/StatsCard';
-import { DollarSign, Users, CreditCard, Activity } from 'lucide-react';
+import { DollarSign, Users, CreditCard, Activity, Download, RefreshCw, Plus, Settings } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { 
   AreaChart, 
   Area, 
@@ -63,6 +64,35 @@ const Dashboard: React.FC = () => {
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h2 className="text-3xl font-bold tracking-tight">仪表盘</h2>
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="sm">
+              <RefreshCw className="mr-2 h-4 w-4" />
+              刷新
+            </Button>
+            <Button variant="outline" size="sm">
+              <Download className="mr-2 h-4 w-4" />
+              导出
+            </Button>
+            <Button size="sm">
+              <Plus className="mr-2 h-4 w-4" />
+              新建
+            </Button>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-2">
+          <Button>默认按钮</Button>
+          <Button variant="secondary">次要按钮</Button>
+          <Button variant="destructive">危险按钮</Button>
+          <Button variant="outline">边框按钮</Button>
+          <Button variant="ghost">幽灵按钮</Button>
+          <Button variant="link">链接按钮</Button>
+          <Button size="sm">小按钮</Button>
+          <Button size="lg">大按钮</Button>
+          <Button size="icon">
+            <Settings className="h-4 w-4" />
+          </Button>
+          <Button disabled>禁用按钮</Button>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">

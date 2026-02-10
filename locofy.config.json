@@ -56,6 +56,6 @@
   "webpack": "./vite.config.ts",
   "publicPath": "./public",
   "framework": "react",
-  "projectId": "39QXmku9jv823kwFb9NBl9XDqZZ",
-  "projectName": "test1"
+  "projectId": "39T0ZjlL2MUctyHbGDGOdisevND",
+  "projectName": "test11"
 }
