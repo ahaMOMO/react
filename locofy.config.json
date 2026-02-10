@@ -1,8 +1,9 @@
 {
-  "components": ["./src/components/Header.tsx", "./src/components/Layout.tsx"],
-  "wrapper": "./src/Wrapper.tsx",
-  "webpack": "./vite.config.ts",
-  "publicPath": "./public",
+  "components": [
+    "./src/components/Header.tsx",
+    "./src/components/Layout.tsx",
+    "./src/components/ui/button.tsx"
+  ],
   "framework": "react",
   "projectId": "39T0ZjlL2MUctyHbGDGOdisevND",
   "projectName": "test11"
